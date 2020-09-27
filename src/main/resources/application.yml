@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: webcrawler
+  flyway:
+    enable: true
+    baseline-on-migrate: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/crawler
+    username: postgres
+    password: hell0ween
+    driver-class-name: org.postgresql.Driver
+
+#configuração de tempo que o scheduler irá rodar
+scheduler-crawler:
+  cron: "0 0/10 * * * *"
+
+#links e classes encontradas no site
+crawler-info:
+  url-crawler: "https://www.submarino.com.br/marca/apple/c/informatica?ordenacao=topSelling"
+  filter-link: "a[href^=\"/marca/apple/c/informatica?ordenacao=topSelling\"]"
+  products-class: ".product-v2__ProductCardV2-sc-19wdoj3-0.eyBjmn.Wrapper-bwhjk3-0.kshSRb.ViewUI-sc-1ijittn-6.iXIDWU"
+  price-class: ".PriceUI-bwhjk3-11.jtJOff.PriceUI-sc-1q8ynzz-0.inNBs.TextUI-sc-12tokcy-0.CIZtP"
+  name-class: "h2.TitleUI-bwhjk3-15.khKJTM.TitleH2-sc-1wh9e1x-1.fINzxm"

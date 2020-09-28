@@ -7,7 +7,7 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/crawler
     username: postgres
-    password: hell0ween
+    password: postgresgo
     driver-class-name: org.postgresql.Driver
 
 #configuração de tempo que o scheduler irá rodar
